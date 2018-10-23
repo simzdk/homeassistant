@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    var future = new Date();
+    future.setDate(future.getDate() + 30);
+    var dateString = future.toISOString().split('T')[0];
+    if(dd<10) {
+        dd = '0'+dd
+    } 
+
+    if(mm<10) {
+        mm = '0'+mm
+    } 
+
+    today = yyyy + '/' + mm + '/' + dd;
+    //today = mm + '/' + dd + '/' + yyyy;
+    document.write("Today: "+ today+"<br/>")
+    document.write("Today+30: "+ dateString)
+</script>
